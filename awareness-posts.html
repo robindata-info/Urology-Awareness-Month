@@ -25,10 +25,10 @@
     .slider-container {
       position: relative;
       width: 100%;
-      max-width: 235px;
+      max-width: 260px;
       aspect-ratio: 9/16;
       overflow: hidden;
-      border-radius: 12px;
+      border-radius: 16px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.4);
       margin: 0 auto;
     }
@@ -36,6 +36,7 @@
       display: none;
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
     .active {
       display: block;
@@ -52,6 +53,7 @@
       border-radius: 50%;
       font-size: 18px;
       transition: 0.3s;
+      z-index: 5;
     }
     .prev:hover, .next:hover {
       background: rgba(0,0,0,0.6);
@@ -77,19 +79,29 @@
       transition: background 0.3s;
     }
     .dot.active { background-color: #2563eb; }
+
+    /* Responsive Slider */
+    @media (max-width: 640px) {
+      .slider-container {
+        max-width: 90%;
+      }
+    }
   </style>
 </head>
-<body class="animated-gradient flex justify-center items-center min-h-screen">
-  <div class="text-center text-white space-y-6">
+<body class="animated-gradient flex justify-center items-center min-h-screen px-4">
+  <div class="text-center text-white w-full max-w-md">
+
     <!-- Title & Subtitle -->
-    <div>
-      <h1 class="text-3xl font-bold">Awareness Post</h1>
-      <p class="text-base text-gray-300 mt-2">Choose an Awareness Post 
-to Educate Your Patients</p>
+    <div class="mb-10 mt-8">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-wide">Awareness Post</h1>
+      <div class="w-16 h-1 bg-blue-500 mx-auto mt-2 mb-3 rounded-full"></div> <!-- 👈 Blue underline -->
+      <p class="text-base sm:text-lg text-gray-300 font-medium">
+        Choose an Awareness Post to Educate Your Patients
+      </p>
     </div>
 
     <!-- Slider -->
-    <div class="slider-container">
+    <div class="slider-container mx-auto">
       <img src="image01.png" class="slide active" alt="Awareness 1"/>
       <img src="image02.png" class="slide" alt="Awareness 2"/>
       <img src="image03.png" class="slide" alt="Awareness 3"/>
@@ -111,8 +123,8 @@ to Educate Your Patients</p>
     </div>
 
     <!-- Create Post Button -->
-    <div>
-      <button class="mt-4 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl shadow-lg transition">
+    <div class="mt-8">
+      <button class="w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg transition">
         + Create Post
       </button>
     </div>
