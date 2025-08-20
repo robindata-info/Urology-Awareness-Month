@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Awareness Selection</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+
+    /* Gradient Background Animation */
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body {
+      background: linear-gradient(-45deg, #1f2937, #111827, #374151, #0f172a);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+    }
+
+    /* Popup Animation */
+    @keyframes popup {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .popup {
+      animation: popup 0.8s ease forwards;
+    }
+
+    /* Text Animation */
+    @keyframes fadeSlide {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .text-animate {
+      animation: fadeSlide 1s ease forwards;
+    }
+
+    /* Icon Animations */
+    @keyframes bounceLoop {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes rotateLoop {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .animate-bounceLoop {
+      animation: bounceLoop 2s infinite;
+    }
+    .animate-rotateLoop {
+      animation: rotateLoop 4s linear infinite;
+    }
+  </style>
+</head>
+<body class="flex flex-col justify-center items-center min-h-screen">
+
+  <!-- Main Title -->
+  <h1 class="text-4xl md:text-5xl font-bold text-white mb-10 text-center text-animate drop-shadow-lg">
+    Awareness Selection
+  </h1>
+
+  <div class="container mx-auto px-4 flex flex-col md:flex-row gap-6 md:gap-10 justify-center items-center popup">
+    
+    <!-- Awareness Post -->
+    <div class="bg-gray-800 rounded-2xl shadow-lg p-8 w-full md:w-96 text-center text-white">
+      <div class="flex justify-center mb-4">
+        <div class="w-16 h-16 bg-blue-900 text-blue-400 rounded-full flex items-center justify-center animate-bounceLoop text-3xl">
+          📄
+        </div>
+      </div>
+      <h2 class="text-2xl font-semibold mb-4 text-animate">Awareness Post</h2>
+      <p class="text-gray-400 mb-6 text-animate">Share informative posts to spread awareness among your patients.</p>
+      <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition-all duration-300">
+        Create Post
+      </button>
+    </div>
+
+    <!-- Awareness Reels -->
+    <div class="bg-gray-800 rounded-2xl shadow-lg p-8 w-full md:w-96 text-center text-white">
+      <div class="flex justify-center mb-4">
+        <div class="w-16 h-16 bg-red-900 text-red-400 rounded-full flex items-center justify-center animate-rotateLoop text-3xl">
+          🎬
+        </div>
+      </div>
+      <h2 class="text-2xl font-semibold mb-4 text-animate">Awareness Reels</h2>
+      <p class="text-gray-400 mb-6 text-animate">Create short video reels to connect and educate patients in an engaging way.</p>
+      <button class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition-all duration-300">
+        Create Reel
+      </button>
+    </div>
+
+  </div>
+
+</body>
+</html>
