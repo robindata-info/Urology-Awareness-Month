@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Sign Up - Urology Awareness 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .animated-gradient {
+      background: linear-gradient(-45deg, #0f172a, #1e293b, #334155, #64748b);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body class="animated-gradient flex justify-center items-center min-h-screen">
+  <div class="container mx-auto p-4 flex justify-center items-center">
+    <div class="bg-gray-800/80 rounded-lg shadow-lg w-full max-w-3xl p-8 md:p-12 text-white">
+      
+      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Sign Up</h2>
+      
+      <form>
+        <!-- Name -->
+        <div class="mb-4">
+          <label class="block text-gray-300 text-sm font-bold mb-2" for="name">Name</label>
+          <input class="w-full bg-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                 id="name" type="text" placeholder="Enter Name"/>
+        </div>
+
+        <!-- Specialty -->
+        <div class="mb-4">
+          <label class="block text-gray-300 text-sm font-bold mb-2" for="specialty">Specialty</label>
+          <input class="w-full bg-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                 id="specialty" type="text" placeholder="Enter Specialty"/>
+        </div>
+
+        <!-- Hospital Name -->
+        <div class="mb-4">
+          <label class="block text-gray-300 text-sm font-bold mb-2" for="hospital">Hospital Name</label>
+          <input class="w-full bg-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                 id="hospital" type="text" placeholder="Enter Hospital Name"/>
+        </div>
+
+        <!-- City -->
+        <div class="mb-4">
+          <label class="block text-gray-300 text-sm font-bold mb-2" for="city">City</label>
+          <input class="w-full bg-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                 id="city" type="text" placeholder="Enter City"/>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="mb-4">
+          <label class="block text-gray-300 text-sm font-bold mb-2" for="phone">Phone Number</label>
+          <input class="w-full bg-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                 id="phone" type="tel" placeholder="Enter Phone Number"/>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-4">
+          <label class="block text-gray-300 text-sm font-bold mb-2" for="email">Email</label>
+          <input class="w-full bg-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                 id="email" type="email" placeholder="Enter Email"/>
+        </div>
+
+        <!-- Photo Upload -->
+        <div class="mb-6">
+          <label class="block text-gray-300 text-sm font-bold mb-2" for="photo">Upload Photo</label>
+          <input class="w-full bg-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                 id="photo" type="file" accept="image/*"/>
+        </div>
+
+        <!-- Submit -->
+        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline" type="submit">
+          Sign Up
+        </button>
+      </form>
+
+      <p class="text-center text-gray-300 mt-8">Already have an account? 
+        <a class="text-blue-400 hover:text-blue-300 font-semibold" href="Urology Awareness Month Sign In.html">Login</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
